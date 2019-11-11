@@ -1,6 +1,6 @@
-[![Build Status](https://drone.quving.com/api/badges/Quving/flutter/status.svg)](https://drone.quving.com/Quving/flutter)
 
 # Flutter Docker-Images
+[![Build Status](https://drone.quving.com/api/badges/Quving/flutter/status.svg)](https://drone.quving.com/Quving/flutter)
 
 Provides base images of Flutter.
 
@@ -13,12 +13,12 @@ Provides base images of Flutter.
 | ```pingu/flutter:web-<FLUTTER_VERSION>```  | -                                                                                                                                             | -                |
 
 
-## Flutter Version
+## Versioning
 The Flutter Version naming convention is described as follows.
 
 From this tag (2019-11-11):
 
-<img src="https://i.imgur.com/4gRoi8S.png" width=350>
+<img src="https://i.imgur.com/4gRoi8S.png" width=300>
 
 the following tag will be used:
 
