@@ -14,7 +14,12 @@ Provides base images of Flutter.
 
 
 ## Flutter Version
-The Flutter Version naming convention is retrieved from here:
+The Flutter Version naming convention is described as follows.
 
-Screenshot:
-![](https://i.imgur.com/OONuycW.png)
+From this tag (2019-11-11):
+
+<img src="https://i.imgur.com/4gRoi8S.png" width=350>
+
+the following tag will be used:
+
+```v1.9.1+hotfix.6-stable```
