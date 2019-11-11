@@ -1,6 +1,6 @@
-# Flutter Docker-Images
-
 [![Build Status](https://drone.quving.com/api/badges/Quving/flutter/status.svg)](https://drone.quving.com/Quving/flutter)
+
+# Flutter Docker-Images
 
 Provides base images of Flutter.
 
