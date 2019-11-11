@@ -10,10 +10,10 @@ MAINTAINER vinh-ngu@hotmail.com
 RUN apt update && apt install -y wget xz-utils git curl unzip
 
 # Select flutter version.
-ENV FLUTTER_VERSION "flutter_linux_v1.9.1+hotfix.6-stable.tar.xz"
+ENV FLUTTER_VERSION "v1.9.1+hotfix.6-stable"
 
 # Install flutter
-RUN wget "https://storage.googleapis.com/flutter_infra/releases/stable/linux/"${FLUTTER_VERSION}
+RUN wget "https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_"${FLUTTER_VERSION}".tar.xz"
 ENV PATH="$PATH:/flutter/bin"
 RUN tar xf ${FLUTTER_VERSION}
 RUN rm ${FLUTTER_VERSION}
