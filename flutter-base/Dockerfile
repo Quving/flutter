@@ -1,4 +1,4 @@
-FROM debian:10
+FROM debian:stable-slim
 
 # Description
 # This Dockerfile is inspired by the official docs to install flutter on linux.
