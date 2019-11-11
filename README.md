@@ -22,4 +22,6 @@ From this tag (2019-11-11):
 
 the following tag will be used:
 
-```v1.9.1+hotfix.6-stable```
+```
+v1.9.1+hotfix.6-stable
+```
