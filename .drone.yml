@@ -8,7 +8,9 @@ steps:
   image: plugins/docker
   settings:
     repo: pingu/flutter
-    tags: latest
+    tags: 
+      - latest
+      - base-latest
     dockerfile: flutter-base/Dockerfile
     username:
       from_secret: docker_username
@@ -22,8 +24,40 @@ steps:
   image: plugins/docker
   settings:
     repo: pingu/flutter
-    tags: ${DRONE_TAG}
+    tags: 
+      - base-${DRONE_TAG}
     dockerfile: flutter-base/Dockerfile
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+  when:
+    status: [ success ]
+    event:
+      - tag
+
+- name: publish flutter-web latest
+  image: plugins/docker
+  settings:
+    repo: pingu/flutter
+    tags: 
+      - web-latest
+    dockerfile: flutter-web/Dockerfile
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+  when:
+    status: [ success ]
+    branch: [ master ]
+
+- name: publish flutter-web tagged
+  image: plugins/docker
+  settings:
+    repo: pingu/flutter
+    tags: 
+      - web-${DRONE_TAG}
+    dockerfile: flutter-web/Dockerfile
     username:
       from_secret: docker_username
     password:
