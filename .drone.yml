@@ -9,6 +9,7 @@ steps:
   settings:
     repo: pingu/flutter
     tags: latest
+    dockerfile: flutter-base/Dockerfile
     username:
       from_secret: docker_username
     password:
@@ -22,6 +23,7 @@ steps:
   settings:
     repo: pingu/flutter
     tags: ${DRONE_TAG}
+    dockerfile: flutter-base/Dockerfile
     username:
       from_secret: docker_username
     password:
