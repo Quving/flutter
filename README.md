@@ -11,7 +11,13 @@ Provides base images of Flutter.
 | ```pingu/flutter:base-<FLUTTER_VERSION>``` | -                                                                                                                                             | -                |
 | ```pingu/flutter:web-latest```             | Installs basic flutter + flutter-web extension accordingly to the official [google-flutter-web-doc](https://flutter.dev/docs/get-started/web).| 1.5G             |
 | ```pingu/flutter:web-<FLUTTER_VERSION>```  | -                                                                                                                                             | -                |
-
+# Usage
+```
+docker pull pingu/flutter:base-latest
+```
+```
+docker pull pingu/flutter:web-latest
+```
 
 ## Versioning
 The Flutter Version naming convention is described as follows.
