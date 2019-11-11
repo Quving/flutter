@@ -1,0 +1,32 @@
+---
+kind: pipeline
+type: docker
+name: pipeline
+
+steps:
+- name: publish flutter-base latest
+  image: plugins/docker
+  settings:
+    repo: pingu/flutter
+    tags: latest
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+  when:
+    status: [ success ]
+    branch: [ master ]
+
+- name: publish flutter-base tagged
+  image: plugins/docker
+  settings:
+    repo: pingu/flutter
+    tags: ${DRONE_TAG}
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+  when:
+    status: [ success ]
+    event:
+      - tag
