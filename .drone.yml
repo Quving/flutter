@@ -8,7 +8,7 @@ steps:
   image: plugins/docker
   settings:
     repo: pingu/flutter
-    tags: 
+    tags:
       - latest
       - base-latest
     dockerfile: flutter-base/Dockerfile
@@ -24,7 +24,7 @@ steps:
   image: plugins/docker
   settings:
     repo: pingu/flutter
-    tags: 
+    tags:
       - base-${DRONE_TAG}
     dockerfile: flutter-base/Dockerfile
     username:
@@ -36,11 +36,17 @@ steps:
     event:
       - tag
 
+---
+kind: pipeline
+type: docker
+name: pipeline
+
+steps:
 - name: publish flutter-web latest
   image: plugins/docker
   settings:
     repo: pingu/flutter
-    tags: 
+    tags:
       - web-latest
     dockerfile: flutter-web/Dockerfile
     username:
@@ -55,7 +61,7 @@ steps:
   image: plugins/docker
   settings:
     repo: pingu/flutter
-    tags: 
+    tags:
       - web-${DRONE_TAG}
     dockerfile: flutter-web/Dockerfile
     username:
