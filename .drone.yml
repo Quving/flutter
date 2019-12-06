@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: pipeline
+name: pipeline flutter-base
 
 steps:
 - name: publish flutter-base latest
@@ -39,7 +39,7 @@ steps:
 ---
 kind: pipeline
 type: docker
-name: pipeline
+name: pipeline flutter-web
 
 steps:
 - name: publish flutter-web latest
